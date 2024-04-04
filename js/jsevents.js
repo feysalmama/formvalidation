@@ -30,7 +30,16 @@ const  validation = () =>{
     }else{
         setSuccess(fName);
         formStatus=1
+    } 
+    if(lNameValue ==='' || lNameValue == null){
+        setError(lName,"First Name Required ");
+        formStatus=0
+       
+    }else{
+        setSuccess(lName);
+        formStatus=1
     }
+   
 
     if (formStatus === 1) {
         // Proceed with form submission
