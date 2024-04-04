@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="forms/forms.css">
     <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/2974b28e9e.js" crossorigin="anonymous"></script>
     <title>Registration Form</title>
 </head>
 <body>
@@ -15,29 +16,36 @@
         <form action="forms/registration-success.html" method="get" id="form">
           <div class="input-group">
             <label><strong>First Name:</strong></label>
-            <input type="text" name="fname" placeholder="Enter Your First Name"  id="fname">
+            <input type="text" name="fname" placeholder="Enter Your First Name"  id="fname" onkeyup="validateFname()">
             <div class="error"></div>
+            <span id="fname_Error"></span>
           </div>
     
           <div class="input-group">
             <label><strong>Last Name:</strong></label>
-            <input type="text" placeholder="Enter Your Last Name" id="lname">
+            <input type="text" placeholder="Enter Your Last Name" id="lname" onkeyup="validateLname()">
             <div class="error"></div>
+            <span id="lname_Error"></span>
           </div>
     
           <div class="input-group">
             <label><strong>Date of Birth:</strong></label>
-            <input type="date"  name="date" id="dob">
+            <input type="date"  name="date" id="dob" onkeyup="validateDOB()">
+            <div class="error"></div>
+            <span id="dob_Error"></span>
           </div> 
 
           <div class="input-group">
             <label><strong>Email Id:</strong></label>
-            <input type="email" placeholder="Enter Your Email Id" id="email_id">
+            <input type="email" placeholder="Enter Your Email Id" id="email_id" onkeyup="validateEmail()">
+            <span id="email_Error"></span>
           </div>
 
           <div class="input-group">
             <label><strong>Mobile No.:</strong></label>
-            <input type="tel" placeholder="Enter your mobile number" id="phone_no" >
+            <input type="tel" placeholder="Enter your mobile number" id="phone_no" onkeyup="validatePhoneNo()">
+            <div class="error"></div>
+            <span id="phone_Error"></span>
           </div>
 
           <div class="input-group">
@@ -87,10 +95,12 @@
     
           <div class="input-group">
             <label><strong>Hobbies:</strong></label>
-            <textarea rows="5" placeholder="Enter Your Hobbies" id="hobbies" ></textarea>
+            <textarea rows="5" placeholder="Enter Your Hobbies" id="hobbies" onkeyup="validateMessage()"></textarea>
+            <span id="message-error"></span>
           </div>
     
         <button type="submit" >Submit</button>
+        <span id="submit_Error"></span>
        
       </form>
 

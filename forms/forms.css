@@ -55,7 +55,6 @@ div.error{
     display: block;
 }
 
-
 ::placeholder{
     font-size: 14px;
 }
@@ -70,4 +69,17 @@ form button{
     cursor: pointer;
     display: block;
     margin: 30px auto 10px;
+}
+.input-group span{
+    position: absolute;
+    bottom: 12px;
+    right:40px;
+    font-size: 14px;
+    color: red;
+}
+#submit-Error{
+    color:red;
+}
+.input-group span i {
+    color: seagreen;
 }

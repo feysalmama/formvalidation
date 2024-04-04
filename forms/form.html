@@ -5,36 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="forms.css">
+    <script src="https://kit.fontawesome.com/2974b28e9e.js" crossorigin="anonymous"></script>
     <title>Registration Form</title>
 </head>
 <body>
-
-    <div class="form-container">
+      <div class="form-container">
         <h1>Student Registration Form</h1>
         <form action="registration-success.html">
+          
           <div class="input-group">
             <label><strong>First Name:</strong></label>
-            <input type="text" placeholder="Enter Your First Name" id="fname">
+            <input type="text" placeholder="Enter Your First Name" id="fname" onkeyup="validateFname()">
+            <span id="fname-error"></span>
           </div>
     
           <div class="input-group">
             <label><strong>Last Name:</strong></label>
-            <input type="text" placeholder="Enter Your Last Name" id="lname">
+            <input type="text" placeholder="Enter Your Last Name" id="lname" onkeyup="validateLname()">
+            <span id="lname-error"></span>
           </div>
     
           <div class="input-group">
             <label><strong>Date of Birth:</strong></label>
-            <input type="date"  name="date" id="dob">
+            <input type="date"  name="date" id="dob" onkeyup = "validateDOB()">
+            <span id="dob_Error"></span>
           </div> 
 
           <div class="input-group">
             <label><strong>Email Id:</strong></label>
-            <input type="email" placeholder="Enter Your Email Id" id="email-id">
+            <input type="email" placeholder="Enter Your Email Id" id="email-id" onkeyup="validateEmail()">
+            <span id="email_Error"></span>
           </div>
 
           <div class="input-group">
             <label><strong>Mobile No.:</strong></label>
-            <input type="tel" placeholder="Enter your mobile number" id="phone-no">
+            <input type="tel" placeholder="Enter your mobile number" id="phone-no" onkeyup="validatePhoneNo()">
+            <span id="phoneno_Error"></span>
           </div>
 
           <div class="input-group">
@@ -83,14 +89,16 @@
     
           <div class="input-group">
             <label><strong>Hobbies:</strong></label>
-            <textarea rows="5" placeholder="Enter Your Hobbies" id="hobbies" ></textarea>
+            <textarea rows="5" placeholder="Enter Your Hobbies" id="hobbies" onkeyup = "validateMessage()"></textarea>
+            <span id="message-error"></span>
           </div>
     
         <button >Submit</button>
+        <span id="submit-Error"></span>
        
       </form>
 
       </div>
-      <script src="script.js"></script>
+      <script src="/js/jsevents.js"></script>
 </body>
 </html>
